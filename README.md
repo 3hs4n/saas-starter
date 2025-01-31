@@ -37,14 +37,14 @@ pnpm install
 Use the included setup script to create your `.env` file:
 
 ```bash
-pnpm db:setup
+npm run db:setup
 ```
 
 Then, run the database migrations and seed the database with a default user and team:
 
 ```bash
-pnpm db:migrate
-pnpm db:seed
+npm run db:migrate
+npm run db:seed
 ```
 
 This will create the following user and team:
