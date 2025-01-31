@@ -46,6 +46,11 @@ Then, run the database migrations and seed the database with a default user and 
 npm run db:migrate
 npm run db:seed
 ```
+or
+```bash
+pnpm db:migrate
+pnpm db:seed
+```
 
 This will create the following user and team:
 
@@ -56,6 +61,10 @@ You can, of course, create new users as well through `/sign-up`.
 
 Finally, run the Next.js development server:
 
+```bash
+npm run dev
+```
+or
 ```bash
 pnpm dev
 ```
