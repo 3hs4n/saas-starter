@@ -1,0 +1,27 @@
+
+# docker-compose -f docker-compose.yml up
+# version: "3.9"
+
+services:
+  postgres:
+    image: postgres:17.2
+    container_name: next_saas_starter
+    environment:
+      POSTGRES_DB: postgres_db
+      POSTGRES_USER: postgres_user
+      POSTGRES_PASSWORD: postgres_password
+    ports:
+      - "54322:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  adminer:
+    image: adminer
+    container_name: adminer_ui
+    restart: always
+    ports:
+      - "8080:8080"
+
+volumes:
+  postgres_data:
+
